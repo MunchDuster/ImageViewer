@@ -1,0 +1,39 @@
+.addButton{
+	width:20px;
+	height:20px;
+	border-radius: 20px;
+}
+.visibleBG{
+	background-color: rgb(214, 214, 214);
+	padding-left: 3px;
+}
+body{
+	font-family: 'Roboto';
+	line-height: 12px;
+	font-size: 15px;
+}
+textarea{
+	resize: none;
+}
+input[type='range'] {
+     overflow: hidden;
+      width: 80px;
+      -webkit-appearance: none;
+      background-color: #313131;
+	  outline: none;
+	  border-radius: 10px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+     border-radius: 10px;
+      background: #c5c5c5;
+      
+    }
+input[type='range']::-webkit-slider-thumb:hover {
+      
+      background: #a7a7a7;
+    
+    }

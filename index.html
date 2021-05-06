@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Image Viewer</title>
+	<link rel="shortcut icon" type="image/x-icon"  href="mememan.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
+</head>
+<body>
+	<div>
+		<img src="plus.png" class="addButton" id="add" onclick="addImageDiv.style.display = addImageDiv.style.display=='none'?'block':'none';">
+		<img src="pencil.png" class="addButton" id="edit"
+			onclick="editImageDiv.style.display = editImageDiv.style.display=='none'?'block':'none';">
+	</div>
+	<div id="addImageDiv" class="visibleBG">
+		Upload <input id="upload"type="file" accept="image/*" oninput="setImageFile(event);" ><br>
+		URL <textarea id="url" rows="1" oninput="setImageUrl(this.value);" ></textarea><br>
+		<button onclick="clearstuff();" >Clear</button><br>
+	</div>
+	<div id="editImageDiv"class="visibleBG">
+		Brightness<input value="50" type="range" oninput="brightness = this.value / 50;Update();"><br>
+		Contrast  <input value="50" type="range" oninput="contrast   = this.value / 50;Update();"><br>
+		GrayScale <input value="0"  type="range" oninput="grayScale  = this.value / 50;Update();"><br>
+		Blur      <input value="0"  type="range" oninput="blurr      = this.value / 10;Update();"><br>
+		Invert    <input value="0"  type="range" oninput="invert     = this.value / 50;Update();"><br>
+		Sepia     <input value="0"  type="range" oninput="sepia      = this.value / 50;Update();"><br>
+		Hue Rotate<input value="0"  type="range" oninput="hueRotate  = this.value /100;Update();"><br>
+		Opacity   <input value="0"  type="range" oninput="opacity    = this.value /100;Update();"><br>
+		Saturate  <input value="100"type="range" oninput="saturation = this.value /100;Update();"><br>
+		Size      <input value="50" type="range" oninput="sizex      = this.value / 50;Update();"><br>
+		<button onclick="Reset();" >Reset</button>
+	</div>
+	<img id="originalImage" src="noimage.png" >
+	<img id="imageDisplay" src="noimage.png" >
+	<script src="script.js"></script>
+</body>
+</html>
