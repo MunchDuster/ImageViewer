@@ -4,7 +4,6 @@ const imageDisplay = document.getElementById("imageDisplay");
 
 var brightness = 1;
 var contrast = 1;
-var grayScale = 0;
 var blurr = 0;
 var saturation = 1;
 var sepia = 0;
@@ -15,8 +14,11 @@ var hueRotate = 0;
 var sizex = 1;
 var oriX = 0;
 
+function setImagePasted() {
+	
+}
 function setImageFile(event) {
-	createImageBitmap(event.target.files[0]).then((map) => { console.log("image added: " + map.width) });
+	createImageBitmap(event.target.files[0]).then((map) => { oriX = map.width; });
 	imageDisplay.src = URL.createObjectURL(event.target.files[0]);
 	originalImage.src = imageDisplay.src;  
 }
@@ -32,9 +34,11 @@ function Update() {
     brightness +
     ")  contrast(" +
     contrast +
-    ") grayscale(" +
-    grayScale +
-    ") saturate(" +
+		") sepia(" + sepia +
+		") hue-rotate(" +
+		(hueRotate*360) +
+	
+	"deg) saturate(" +
     saturation +
     ") invert(" +
     invert +
