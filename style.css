@@ -64,7 +64,10 @@ canvas {
 body {
   background-color: black;
   color: rgb(243, 243, 243);
-  overflow: hidden;
+
+  font-family: "Roboto";
+  line-height: 12px;
+  font-size: 15px;
 }
 .visibleBG {
   background-color: rgb(34, 34, 34);
@@ -84,11 +87,7 @@ body {
   height: 30px;
   border-radius: 20px;
 }
-body {
-  font-family: "Roboto";
-  line-height: 12px;
-  font-size: 15px;
-}
+
 textarea {
   resize: none;
 }
